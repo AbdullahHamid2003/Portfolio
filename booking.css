@@ -1,0 +1,150 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to bottom, #001f3f, #003366);
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+  
+  .container {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  
+  h1, h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-weight: 700;
+    color: #00cfff;
+  }
+  
+  .booking-card {
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid #00cfff;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 0 15px rgba(0, 207, 255, 0.2);
+    transition: transform 0.3s ease;
+  }
+  
+  .booking-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 25px rgba(0, 207, 255, 0.5);
+  }
+  
+  label {
+    color: #aefeff;
+    font-weight: 500;
+  }
+  
+  .form-control, .form-select {
+    background-color: #e0faff;
+    border: none;
+  }
+  
+  .btn-primary {
+    background-color: #00cfff;
+    border: none;
+    font-weight: 600;
+    transition: background-color 0.3s;
+  }
+  
+  .btn-primary:hover {
+    background-color: #00aacc;
+  }
+  
+  .rate-section {
+    margin-top: 50px;
+  }
+  
+  .rate-card {
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid #00cfff;
+    border-radius: 15px;
+    padding: 20px;
+    color: #ffffff;
+    text-align: center;
+    transition: transform 0.3s ease;
+  }
+  
+  .rate-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(0, 207, 255, 0.4);
+  }
+  
+  .rate-card h4 {
+    color: #00cfff;
+  }
+  
+  .footer-note {
+    text-align: center;
+    margin-top: 40px;
+    color: #aefeff;
+    font-size: 0.9rem;
+  }
+  
+  /* nav bar */
+.fade-bg {
+  background: linear-gradient(to right, #1c4d4f, #1c4d4f, #156b6e, #286e6b , #078b77, #09a197);
+}
+
+.fade-vertical {
+  background: linear-gradient(to bottom, #1c4d4f, #156b6e, #286e6b, #078b77, #09a197);
+}
+
+.dropdown-item:hover {
+  background-color: whitesmoke !important;
+  color: #286e6b !important;
+}
+
+@media screen and (max-width:991px) {
+  .dropdown-item:hover {
+
+      background-color: whitesmoke !important;
+      color: #286e6b !important;
+  }
+}
+.nav-link{
+  font-family: cambria, roboto !important;
+  transition: transform 0.3s ease;
+}
+.nav-link:hover{
+  transform: translateX(+5px);
+  color: #23ccd7 !important;
+}
+.btn-outline-success{
+  background: linear-gradient(to bottom, #1c4d4f, #156b6e, #286e6b, #078b77, #09a197);
+  color: whitesmoke;
+  transition: transform 0.3s ease;
+  font-family: cambria, roboto !important;
+}
+.btn-outline-success:hover{
+  background: linear-gradient(to left, #1c4d4f, #1c4d4f, #286e6b, #078b77, #09a197);
+  transform: translateX(-10px);
+  color: #23ccd7;
+}
+section{
+  background: linear-gradient(to right, #1c4d4f, #1c4d4f, #156b6e, #286e6b , #078b77, #09a197);   
+}
+#chevron{
+  border-radius: 100%;
+  background-color: white;
+}
+#chevron:hover{
+
+transition: transform 0.3s ease;
+background-color: blue;
+border-radius: 10%;
+}
+
+footer {
+  background: linear-gradient(to right, #1c4d4f, #156b6e, #286e6b, #078b77, #09a197);
+  /* position: sticky; */
+  width: 100%;
+  margin: 0 !important;
+  padding: 0 !important;
+  left: 0;
+  right: 0;
+  position: relative;
+}
