@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Marks Checker</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+        }
+        input, button {
+            margin: 10px 5px;
+            padding: 8px;
+        }
+        table {
+            margin-top: 20px;
+            width: 60%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid #555;
+            padding: 10px;
+            text-align: center;
+        }
+        th {
+            background-color: #eee;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Student Marks Checker</h2>
+    <input type="text" id="studentName" placeholder="Enter student name" />
+    <input type="number" id="studentMarks" placeholder="Enter marks (0-100)" min="0" max="100" />
+    <button onclick="checkGrade()">Submit</button>
+
+    <table id="studentsTable">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Marks</th>
+                <th>Grade</th>
+            </tr>
+        </thead>
+        <tbody id="tableBody">
+            <!-- Student rows will appear here -->
+        </tbody>
+    </table>
+
+    <script>
+        let students = [];
+
+        function checkGrade() {
+            const name = document.getElementById("studentName").value.trim();
+            const marks = parseInt(document.getElementById("studentMarks").value);
+
+            if (name === "" || isNaN(marks) || marks < 0 || marks > 100) {
+                alert("Please enter valid student name and marks (0–100).");
+                return;
+            }
+
+            let grade = "";
+            if (marks >= 80) {
+                grade = "A";
+            } else if (marks >= 60) {
+                grade = "B";
+            } else if (marks >= 40) {
+                grade = "C";
+            } else {
+                grade = "Fail";
+            }
+
+            alert(`${name} scored grade: ${grade}`);
+
+            students.push({ name, marks, grade });
+            displayStudents();
+        }
+
+        function displayStudents() {
+            const tableBody = document.getElementById("tableBody");
+            tableBody.innerHTML = "";
+
+            for (let i = 0; i < students.length; i++) {
+                const student = students[i];
+                const row = `<tr>
+                                <td>${student.name}</td>
+                                <td>${student.marks}</td>
+                                <td>${student.grade}</td>
+                             </tr>`;
+                tableBody.innerHTML += row;
+            }
+        }
+    </script>
+
+</body>
+</html>
